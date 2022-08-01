@@ -19,7 +19,7 @@ import com.mvi.ui.main.intent.MainIntent
 import com.mvi.ui.main.viewmodel.MainViewModel
 import com.mvi.ui.main.viewstate.MainState
 import com.mvi.data.factory.ViewModelFactory
-import com.mvi.ui.details.DetailsUserActivity
+import com.mvi.ui.detailsUser.DetailsUserActivity
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.launch
 

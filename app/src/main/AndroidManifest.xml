@@ -12,7 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Mvi" >
         <activity
-            android:name=".ui.details.DetailsUserActivity"
+            android:name=".ui.detailsUser.DetailsUserActivity"
             android:exported="false" />
         <activity
             android:name=".ui.main.MainActivity"

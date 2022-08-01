@@ -1,4 +1,4 @@
-package com.mvi.ui.details.viewstate
+package com.mvi.ui.detailsUser.viewstate
 
 import com.mvi.data.models.User
 

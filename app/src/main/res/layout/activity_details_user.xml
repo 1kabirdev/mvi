@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="16dp"
-    tools:context=".ui.details.DetailsUserActivity">
+    tools:context=".ui.detailsUser.DetailsUserActivity">
 
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/materialCardView"

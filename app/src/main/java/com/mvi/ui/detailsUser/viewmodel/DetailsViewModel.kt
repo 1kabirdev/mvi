@@ -1,10 +1,10 @@
-package com.mvi.ui.details.viewmodel
+package com.mvi.ui.detailsUser.viewmodel
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.mvi.ui.details.intent.DetailsIntent
-import com.mvi.ui.details.repository.DetailsRepository
-import com.mvi.ui.details.viewstate.DetailsState
+import com.mvi.ui.detailsUser.intent.DetailsIntent
+import com.mvi.ui.detailsUser.repository.DetailsRepository
+import com.mvi.ui.detailsUser.viewstate.DetailsState
 import kotlinx.coroutines.channels.Channel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow

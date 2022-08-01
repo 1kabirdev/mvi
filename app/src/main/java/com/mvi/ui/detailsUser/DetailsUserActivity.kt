@@ -1,9 +1,7 @@
-package com.mvi.ui.details
+package com.mvi.ui.detailsUser
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
-import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.ViewModelProviders
 import androidx.lifecycle.lifecycleScope
 import com.bumptech.glide.Glide
@@ -12,9 +10,9 @@ import com.mvi.data.api.impl.ApiHelperImpl
 import com.mvi.data.factory.ViewModelDetailsFactory
 import com.mvi.data.models.User
 import com.mvi.databinding.ActivityDetailsUserBinding
-import com.mvi.ui.details.intent.DetailsIntent
-import com.mvi.ui.details.viewmodel.DetailsViewModel
-import com.mvi.ui.details.viewstate.DetailsState
+import com.mvi.ui.detailsUser.intent.DetailsIntent
+import com.mvi.ui.detailsUser.viewmodel.DetailsViewModel
+import com.mvi.ui.detailsUser.viewstate.DetailsState
 import kotlinx.coroutines.launch
 
 class DetailsUserActivity : AppCompatActivity() {
