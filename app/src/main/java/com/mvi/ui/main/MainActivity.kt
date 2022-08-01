@@ -1,4 +1,4 @@
-package com.mvi.ui
+package com.mvi.ui.main
 
 import android.annotation.SuppressLint
 import androidx.appcompat.app.AppCompatActivity
@@ -9,14 +9,15 @@ import androidx.lifecycle.ViewModelProviders
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.mvi.data.User
+import com.mvi.data.models.User
 import com.mvi.data.api.impl.ApiHelperImpl
 import com.mvi.data.api.RetrofitBuilder
 import com.mvi.databinding.ActivityMainBinding
-import com.mvi.ui.intent.MainIntent
-import com.mvi.ui.viewmodel.MainViewModel
-import com.mvi.ui.viewstate.MainState
-import com.mvi.utils.ViewModelFactory
+import com.mvi.ui.main.adapter.MainAdapter
+import com.mvi.ui.main.intent.MainIntent
+import com.mvi.ui.main.viewmodel.MainViewModel
+import com.mvi.ui.main.viewstate.MainState
+import com.mvi.data.factory.ViewModelFactory
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.launch
 

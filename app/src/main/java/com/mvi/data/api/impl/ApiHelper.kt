@@ -1,6 +1,6 @@
 package com.mvi.data.api.impl
 
-import com.mvi.data.User
+import com.mvi.data.models.User
 
 interface ApiHelper {
 

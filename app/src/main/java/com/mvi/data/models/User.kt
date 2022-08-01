@@ -1,4 +1,4 @@
-package com.mvi.data
+package com.mvi.data.models
 
 import com.squareup.moshi.Json
 

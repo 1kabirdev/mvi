@@ -1,4 +1,4 @@
-package com.mvi.data.repository
+package com.mvi.ui.main.repository
 
 import com.mvi.data.api.impl.ApiHelper
 

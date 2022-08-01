@@ -1,6 +1,6 @@
-package com.mvi.ui.viewstate
+package com.mvi.ui.main.viewstate
 
-import com.mvi.data.User
+import com.mvi.data.models.User
 
 sealed class MainState {
     object Idle : MainState()
