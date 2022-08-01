@@ -2,8 +2,8 @@ package com.mvi.ui.main.viewmodel
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.mvi.data.intent.MainIntent
 import com.mvi.ui.main.repository.MainRepository
-import com.mvi.ui.main.intent.MainIntent
 import com.mvi.ui.main.viewstate.MainState
 import kotlinx.coroutines.channels.Channel
 import kotlinx.coroutines.flow.MutableStateFlow

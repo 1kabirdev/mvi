@@ -5,12 +5,12 @@ import android.os.Bundle
 import androidx.lifecycle.ViewModelProviders
 import androidx.lifecycle.lifecycleScope
 import com.bumptech.glide.Glide
-import com.mvi.data.api.ApiService
-import com.mvi.data.api.impl.ApiHelperImpl
+import com.mvi.data.service.api.ApiService
+import com.mvi.data.service.api.impl.ApiHelperImpl
 import com.mvi.data.factory.ViewModelDetailsFactory
+import com.mvi.data.intent.DetailsIntent
 import com.mvi.data.models.User
 import com.mvi.databinding.ActivityDetailsUserBinding
-import com.mvi.ui.detailsUser.intent.DetailsIntent
 import com.mvi.ui.detailsUser.viewmodel.DetailsViewModel
 import com.mvi.ui.detailsUser.viewstate.DetailsState
 import kotlinx.coroutines.launch

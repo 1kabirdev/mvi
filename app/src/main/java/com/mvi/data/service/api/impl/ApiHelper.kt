@@ -1,4 +1,4 @@
-package com.mvi.data.api.impl
+package com.mvi.data.service.api.impl
 
 import com.mvi.data.models.User
 

@@ -1,4 +1,4 @@
-package com.mvi.data.api
+package com.mvi.data.service.api
 
 import com.mvi.data.models.User
 import retrofit2.Retrofit
