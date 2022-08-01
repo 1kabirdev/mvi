@@ -11,7 +11,7 @@ import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.consumeAsFlow
 import kotlinx.coroutines.launch
 
-class DetailsViewModel(private var repository: DetailsRepository) : ViewModel() {
+class DetailsViewModel constructor(private var repository: DetailsRepository) : ViewModel() {
     val userIntent = Channel<DetailsIntent>(Channel.UNLIMITED)
     private var _state = MutableStateFlow<DetailsState>(DetailsState.Idle)
     val state: StateFlow<DetailsState> get() = _state
