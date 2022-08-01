@@ -1,6 +1,7 @@
 package com.mvi.ui.main
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -18,14 +19,15 @@ import com.mvi.ui.main.intent.MainIntent
 import com.mvi.ui.main.viewmodel.MainViewModel
 import com.mvi.ui.main.viewstate.MainState
 import com.mvi.data.factory.ViewModelFactory
+import com.mvi.ui.details.DetailsUserActivity
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.launch
 
 @ExperimentalCoroutinesApi
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(), MainAdapter.OnClickListener {
 
     private lateinit var mainViewModel: MainViewModel
-    private var adapter = MainAdapter(arrayListOf())
+    private var adapter = MainAdapter(arrayListOf(), this)
     private lateinit var binding: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -94,5 +96,14 @@ class MainActivity : AppCompatActivity() {
             adapter.addData(data)
         }
         adapter.notifyDataSetChanged()
+    }
+
+    override fun onClickUser(login: String) {
+        startActivity(
+            Intent(
+                this,
+                DetailsUserActivity::class.java
+            ).putExtra("LOGIN", login)
+        )
     }
 }
