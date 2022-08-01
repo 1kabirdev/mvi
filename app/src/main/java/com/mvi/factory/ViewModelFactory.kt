@@ -1,4 +1,4 @@
-package com.mvi.data.factory
+package com.mvi.factory
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider

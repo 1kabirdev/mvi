@@ -2,7 +2,7 @@ package com.mvi.ui.detailsUser.viewmodel
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.mvi.data.intent.DetailsIntent
+import com.mvi.intent.DetailsIntent
 import com.mvi.ui.detailsUser.repository.DetailsRepository
 import com.mvi.ui.detailsUser.viewstate.DetailsState
 import kotlinx.coroutines.channels.Channel

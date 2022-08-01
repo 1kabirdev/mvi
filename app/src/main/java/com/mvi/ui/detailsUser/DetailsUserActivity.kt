@@ -7,8 +7,8 @@ import androidx.lifecycle.lifecycleScope
 import com.bumptech.glide.Glide
 import com.mvi.data.service.api.ApiService
 import com.mvi.data.service.api.impl.ApiHelperImpl
-import com.mvi.data.factory.ViewModelDetailsFactory
-import com.mvi.data.intent.DetailsIntent
+import com.mvi.factory.ViewModelDetailsFactory
+import com.mvi.intent.DetailsIntent
 import com.mvi.data.models.User
 import com.mvi.databinding.ActivityDetailsUserBinding
 import com.mvi.ui.detailsUser.viewmodel.DetailsViewModel

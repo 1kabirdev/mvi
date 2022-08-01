@@ -1,4 +1,4 @@
-package com.mvi.data.intent
+package com.mvi.intent
 
 
 /**

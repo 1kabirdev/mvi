@@ -17,8 +17,8 @@ import com.mvi.databinding.ActivityMainBinding
 import com.mvi.ui.main.adapter.MainAdapter
 import com.mvi.ui.main.viewmodel.MainViewModel
 import com.mvi.ui.main.viewstate.MainState
-import com.mvi.data.factory.ViewModelFactory
-import com.mvi.data.intent.MainIntent
+import com.mvi.factory.ViewModelFactory
+import com.mvi.intent.MainIntent
 import com.mvi.ui.detailsUser.DetailsUserActivity
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.launch
