@@ -20,6 +20,7 @@ import com.mvi.ui.main.viewstate.MainState
 import com.mvi.factory.ViewModelFactory
 import com.mvi.intent.MainIntent
 import com.mvi.ui.detailsUser.DetailsUserActivity
+import com.mvi.utils.Constants
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.launch
 
@@ -103,7 +104,7 @@ class MainActivity : AppCompatActivity(), MainAdapter.OnClickListener {
             Intent(
                 this,
                 DetailsUserActivity::class.java
-            ).putExtra("LOGIN", login)
+            ).putExtra(Constants.LOGIN, login)
         )
     }
 }

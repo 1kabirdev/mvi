@@ -13,9 +13,11 @@ import com.mvi.data.models.User
 import com.mvi.databinding.ActivityDetailsUserBinding
 import com.mvi.ui.detailsUser.viewmodel.DetailsViewModel
 import com.mvi.ui.detailsUser.viewstate.DetailsState
+import com.mvi.utils.Constants
 import kotlinx.coroutines.launch
 
 class DetailsUserActivity : AppCompatActivity() {
+
     private lateinit var binding: ActivityDetailsUserBinding
     private lateinit var detailsViewModel: DetailsViewModel
 
@@ -27,7 +29,7 @@ class DetailsUserActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         val args = intent.extras
-        login = args?.get("LOGIN").toString()
+        login = args?.get(Constants.LOGIN).toString()
 
         setupViewModel()
         observeViewModel()
