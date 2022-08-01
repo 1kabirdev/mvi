@@ -15,8 +15,7 @@ class MainViewModel(private val repository: MainRepository) : ViewModel() {
 
     val userIntent = Channel<MainIntent>(Channel.UNLIMITED)
     private val _state = MutableStateFlow<MainState>(MainState.Idle)
-    val state: StateFlow<MainState>
-        get() = _state
+    val state: StateFlow<MainState> get() = _state
 
     init {
         handleIntent()
