@@ -7,7 +7,10 @@ import com.bumptech.glide.Glide
 import com.mvi.data.models.User
 import com.mvi.databinding.ItemListBinding
 
-class MainAdapter(private val users: ArrayList<User>) :
+class MainAdapter(
+    private val users: ArrayList<User>,
+    private val listener: OnClickListener
+) :
     RecyclerView.Adapter<MainAdapter.DataViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): DataViewHolder {
@@ -25,7 +28,7 @@ class MainAdapter(private val users: ArrayList<User>) :
 
     override fun getItemCount(): Int = users.size
 
-    class DataViewHolder(private val binding: ItemListBinding) :
+    inner class DataViewHolder(private val binding: ItemListBinding) :
         RecyclerView.ViewHolder(binding.root) {
 
         fun bindView(user: User) {
@@ -34,10 +37,19 @@ class MainAdapter(private val users: ArrayList<User>) :
                 Glide.with(itemView.context)
                     .load(user.avatar_url)
                     .into(imageViewAvatar)
+
+                itemView.setOnClickListener {
+                    listener.onClickUser(user.login)
+                }
             }
         }
     }
 
     fun addData(list: List<User>) = users.addAll(list)
+
+
+    interface OnClickListener {
+        fun onClickUser(login: String)
+    }
 
 }
