@@ -2,6 +2,8 @@ package com.mvi.ui.detailsUser
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
+import android.widget.Toast
 import androidx.lifecycle.ViewModelProviders
 import androidx.lifecycle.lifecycleScope
 import com.bumptech.glide.Glide
@@ -51,24 +53,24 @@ class DetailsUserActivity : AppCompatActivity() {
         detailsViewModel.handlerIntentUser(login)
         detailsViewModel.state.collect {
             when (it) {
-                is DetailsState.Idle -> {
+                is DetailsState.Idle -> {}
 
-                }
                 is DetailsState.Loading -> {
-
+                    binding.progressBar.visibility = View.VISIBLE
                 }
 
                 is DetailsState.Users -> {
+                    binding.progressBar.visibility = View.GONE
                     setupUI(it.user)
                 }
 
                 is DetailsState.Error -> {
-
+                    binding.progressBar.visibility = View.GONE
+                    Toast.makeText(this@DetailsUserActivity, it.error, Toast.LENGTH_SHORT).show()
                 }
             }
         }
     }
-
 
     private fun setupUI(user: User) = with(binding) {
         Glide.with(this@DetailsUserActivity).load(user.avatar_url).into(imageViewAvatar)
