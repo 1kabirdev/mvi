@@ -9,9 +9,9 @@ import androidx.lifecycle.ViewModelProviders
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.mvi.data.api.ApiService
 import com.mvi.data.models.User
 import com.mvi.data.api.impl.ApiHelperImpl
-import com.mvi.data.api.RetrofitBuilder
 import com.mvi.databinding.ActivityMainBinding
 import com.mvi.ui.main.adapter.MainAdapter
 import com.mvi.ui.main.intent.MainIntent
@@ -56,7 +56,7 @@ class MainActivity : AppCompatActivity() {
             this,
             ViewModelFactory(
                 ApiHelperImpl(
-                    RetrofitBuilder.apiService
+                    ApiService.RetrofitBuilder.apiService
                 )
             )
         )[MainViewModel::class.java]
