@@ -14,7 +14,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.mvi.R
 import com.mvi.data.User
-import com.mvi.data.api.ApiHelperImpl
+import com.mvi.data.api.impl.ApiHelperImpl
 import com.mvi.data.api.RetrofitBuilder
 import com.mvi.ui.intent.MainIntent
 import com.mvi.ui.viewmodel.MainViewModel

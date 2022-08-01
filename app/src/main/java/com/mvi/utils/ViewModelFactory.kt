@@ -2,7 +2,7 @@ package com.mvi.utils
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
-import com.mvi.data.api.ApiHelper
+import com.mvi.data.api.impl.ApiHelper
 import com.mvi.data.repository.MainRepository
 import com.mvi.ui.viewmodel.MainViewModel
 
