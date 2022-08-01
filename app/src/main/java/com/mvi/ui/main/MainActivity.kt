@@ -16,9 +16,9 @@ import com.mvi.data.service.api.impl.ApiHelperImpl
 import com.mvi.databinding.ActivityMainBinding
 import com.mvi.ui.main.adapter.MainAdapter
 import com.mvi.ui.main.viewmodel.MainViewModel
-import com.mvi.ui.main.viewstate.MainState
 import com.mvi.factory.ViewModelFactory
 import com.mvi.intent.MainIntent
+import com.mvi.state.MainState
 import com.mvi.ui.detailsUser.DetailsUserActivity
 import com.mvi.utils.Constants
 import kotlinx.coroutines.ExperimentalCoroutinesApi

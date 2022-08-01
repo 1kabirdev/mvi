@@ -13,8 +13,8 @@ import com.mvi.factory.ViewModelDetailsFactory
 import com.mvi.intent.DetailsIntent
 import com.mvi.data.models.User
 import com.mvi.databinding.ActivityDetailsUserBinding
+import com.mvi.state.DetailsState
 import com.mvi.ui.detailsUser.viewmodel.DetailsViewModel
-import com.mvi.ui.detailsUser.viewstate.DetailsState
 import com.mvi.utils.Constants
 import kotlinx.coroutines.launch
 
