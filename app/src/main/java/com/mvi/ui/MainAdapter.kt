@@ -9,39 +9,39 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.mvi.R
 import com.mvi.data.User
+import com.mvi.databinding.ItemListBinding
 
 class MainAdapter(private val users: ArrayList<User>) :
     RecyclerView.Adapter<MainAdapter.DataViewHolder>() {
 
-    private lateinit var holder: DataViewHolder
-
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): DataViewHolder {
-        val view = LayoutInflater.from(parent.context)
-            .inflate(R.layout.item_list, parent, false)
-        holder = DataViewHolder(view)
-        return holder
+        return DataViewHolder(
+            ItemListBinding.inflate(
+                LayoutInflater.from(parent.context),
+                parent,
+                false
+            )
+        )
     }
 
-    override fun onBindViewHolder(holder: DataViewHolder, position: Int) {
-        holder.bindView(holder, users[position])
-    }
+    override fun onBindViewHolder(holder: DataViewHolder, position: Int) =
+        holder.bindView(users[position])
 
     override fun getItemCount(): Int = users.size
 
-    class DataViewHolder(view: View) : RecyclerView.ViewHolder(view) {
+    class DataViewHolder(private val binding: ItemListBinding) :
+        RecyclerView.ViewHolder(binding.root) {
 
-        private var username: AppCompatTextView = view.findViewById(R.id.textViewUserName)
-        private var imageView: ImageView = view.findViewById(R.id.imageViewAvatar)
-
-        fun bindView(holder: DataViewHolder, user: User) {
-            holder.username.text = user.login
-            Glide.with(itemView.context)
-                .load(user.avatar_url)
-                .into(holder.imageView)
+        fun bindView(user: User) {
+            with(binding) {
+                textViewUserName.text = user.login
+                Glide.with(itemView.context)
+                    .load(user.avatar_url)
+                    .into(imageViewAvatar)
+            }
         }
     }
 
-    fun addData(list: List<User>) {
-        users.addAll(list)
-    }
+    fun addData(list: List<User>) = users.addAll(list)
+
 }
